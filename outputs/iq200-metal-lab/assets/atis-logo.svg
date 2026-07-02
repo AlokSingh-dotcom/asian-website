@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308 298" role="img" aria-labelledby="title">
+  <title id="title">ATIS logo</title>
+  <rect width="308" height="298" fill="#ffffff"/>
+  <polygon points="0,196 73,196 145,76 108,16" fill="#a62a2a"/>
+  <polygon points="116,0 190,0 308,196 232,196" fill="#a62a2a"/>
+  <path fill="#39327c" d="M5 296l32-77h47l30 77H71l-4-13H48l-4 13H5zm51-57l-11 29h22l-11-29z"/>
+  <path fill="#39327c" d="M92 219h81v21h-28v56h-26v-56H92v-21z"/>
+  <path fill="#39327c" d="M185 219h27v77h-27v-77z"/>
+  <path fill="#39327c" d="M225 270h28c1 5 5 8 13 8 7 0 10-2 10-6 0-5-5-7-22-10-18-4-26-11-26-23 0-14 14-21 37-21 22 0 35 7 37 24h-27c-1-5-4-8-11-8-7 0-10 2-10 6 0 4 5 6 19 9 21 5 31 12 31 25 0 16-15 24-39 24-24 0-39-9-40-28z"/>
+</svg>
