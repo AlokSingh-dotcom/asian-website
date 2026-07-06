@@ -92,8 +92,22 @@ function render() {
     ["related", "Related", `${label("Related Services")}<h2>Related services</h2>${related(data.related)}`]
   ];
 
-  document.querySelector(".content").innerHTML = sections.map(([id, , html], index) => section(id, "", html, index % 2 ? "alt" : "")).join("") +
-    `<section class="cta-band reveal" id="quote"><div><h2>Ready to plan ${data.title}?</h2><p class="lead">Share your material, standard, acceptance criteria and target date. Asian Testing and Inspection Services will help shape the right testing program.</p><small>Fast response - Certified testing - Accurate reports</small></div><div class="hero-actions"><a class="button secondary" href="/brochure">Download brochure</a><a class="button primary" href="/#quote">Request Quote</a></div></section>`;
+  document.querySelector(".content").innerHTML =
+    sections
+      .map(([id, , html], index) => section(id, "", html, index % 2 ? "alt" : ""))
+      .join("") +
+<section class="cta-band reveal" id="quote" style="display:none;">` +
+    `<div>` +
+    `<h2>Ready to plan ${data.title}?</h2>` +
+    `<p class="lead">Share your material, standard, acceptance criteria and target date. Asian Testing and Inspection Services will help shape the right testing program.</p>` +
+    `<small>Fast response - Certified testing - Accurate reports</small>` +
+    `</div>` +
+    `<div class="hero-actions">` +
+    `<a class="button secondary" href="../brochure.pdf" target="_blank" rel="noopener noreferrer">Download brochure</a>` +
+    `<a class="button primary" href="/#quote">Request Quote</a>` +
+    `</div>` +
+    `</section>`;
+  
 }
 
 function initInteractions() {

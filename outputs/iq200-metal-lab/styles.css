@@ -299,7 +299,7 @@ body.light .industry-card a, body.light .case-feature a { color:#1f7aff; }
 #quote-status { min-height:24px; margin:0; color:#8dd1ff; font-weight:900; }
 #quote-status.error { color:#ffb1b1; }
 .contact-stack { display:grid; gap:14px; }
-.contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.contact-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
 .contact-grid span { display:block; margin-top:10px; color:var(--muted); }
 .map-card { overflow:hidden; display:grid; gap:12px; padding:12px; border:1px solid var(--line); border-radius:24px; background:rgba(255,255,255,.045); }
 .map-card iframe { width:100%; min-height:320px; border:0; border-radius:18px; filter:saturate(.95) contrast(1.03); }
