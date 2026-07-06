@@ -50,13 +50,13 @@ document.querySelectorAll("img").forEach((image, index) => {
 });
 
 window.addEventListener("load", () => {
-  setTimeout(() => loader.classList.add("hidden"), 700);
+  setTimeout(() => loader?.classList.add("hidden"), 700);
 });
 
 function updateScrollUi() {
   const max = document.documentElement.scrollHeight - window.innerHeight;
-  progress.style.width = `${max ? (window.scrollY / max) * 100 : 0}%`;
-  siteHeader.classList.toggle("scrolled", window.scrollY > 24);
+  if (progress) progress.style.width = `${max ? (window.scrollY / max) * 100 : 0}%`;
+  siteHeader?.classList.toggle("scrolled", window.scrollY > 24);
 }
 
 window.addEventListener("scroll", updateScrollUi, { passive: true });
@@ -76,34 +76,39 @@ navItems.forEach((item) => {
   item.addEventListener("mouseenter", () => moveNavPill(item));
   item.addEventListener("focus", () => moveNavPill(item));
 });
-siteNav.addEventListener("mouseleave", () => moveNavPill(navItems[0]));
+siteNav?.addEventListener("mouseleave", () => moveNavPill(navItems[0]));
 
-navToggle.addEventListener("click", () => {
+navToggle?.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-navDropButton.addEventListener("click", () => {
+navDropButton?.addEventListener("click", () => {
   const isOpen = navDropdown.classList.toggle("open");
   navDropButton.setAttribute("aria-expanded", String(isOpen));
 });
 
-searchButton.addEventListener("click", () => {
-  document.querySelector("#capabilities").scrollIntoView({ behavior: "smooth", block: "start" });
-  setTimeout(() => serviceSearch.focus(), 550);
+searchButton?.addEventListener("click", () => {
+  const capabilities = document.querySelector("#capabilities");
+  if (capabilities) {
+    capabilities.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => serviceSearch?.focus(), 550);
+  } else {
+    window.location.href = "/#capabilities";
+  }
 });
 
-themeToggle.addEventListener("click", () => {
+themeToggle?.addEventListener("click", () => {
   document.body.classList.toggle("light");
   localStorage.setItem("atis-theme", document.body.classList.contains("light") ? "light" : "dark");
 });
 
-siteNav.addEventListener("click", (event) => {
+siteNav?.addEventListener("click", (event) => {
   if (event.target.closest(".nav-drop-button")) return;
   siteNav.classList.remove("open");
-  navDropdown.classList.remove("open");
-  navToggle.setAttribute("aria-expanded", "false");
-  navDropButton.setAttribute("aria-expanded", "false");
+  navDropdown?.classList.remove("open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navDropButton?.setAttribute("aria-expanded", "false");
 });
 
 document.addEventListener("mousemove", (event) => {
@@ -115,17 +120,18 @@ document.addEventListener("mousemove", (event) => {
 
 document.querySelectorAll("a, button, .service-card, .industry-card, .magnetic").forEach((item) => {
   item.addEventListener("mouseenter", () => {
-    cursorRing.classList.add("active");
-    cursorText.textContent = item.dataset.cursor || "VIEW";
+    cursorRing?.classList.add("active");
+    if (cursorText) cursorText.textContent = item.dataset.cursor || "VIEW";
   });
   item.addEventListener("mouseleave", () => {
-    cursorRing.classList.remove("active");
-    cursorText.textContent = "";
+    cursorRing?.classList.remove("active");
+    if (cursorText) cursorText.textContent = "";
     item.style.transform = "";
   });
 });
 
 function filterServices() {
+  if (!serviceSearch) return;
   const query = serviceSearch.value.trim().toLowerCase();
   serviceCards.forEach((card) => {
     const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
@@ -142,9 +148,9 @@ chips.forEach((chip) => {
     filterServices();
   });
 });
-serviceSearch.addEventListener("input", filterServices);
+serviceSearch?.addEventListener("input", filterServices);
 
-quoteForm.addEventListener("submit", async (event) => {
+quoteForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = document.querySelector("#quote-name").value.trim();
   const email = document.querySelector("#quote-email").value.trim();
@@ -243,11 +249,13 @@ const metricObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.45 });
 document.querySelectorAll(".metric").forEach((metric) => metricObserver.observe(metric));
 
-setInterval(() => {
-  testimonials[testimonialIndex].classList.remove("active");
-  testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-  testimonials[testimonialIndex].classList.add("active");
-}, 4300);
+if (testimonials.length) {
+  setInterval(() => {
+    testimonials[testimonialIndex].classList.remove("active");
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    testimonials[testimonialIndex].classList.add("active");
+  }, 4300);
+}
 
 galleryButtons.forEach((button) => {
   button.addEventListener("click", () => {

@@ -33,6 +33,18 @@ def index():
     return _read_text(BUNDLE_DIR / "index.html", "text/html; charset=utf-8")
 
 
+@app.route("/career", methods=["GET"])
+@app.route("/career.html", methods=["GET"])
+def career():
+    return _read_text(BUNDLE_DIR / "career.html", "text/html; charset=utf-8")
+
+
+@app.route("/certifications", methods=["GET"])
+@app.route("/certifications.html", methods=["GET"])
+def certifications():
+    return _read_text(BUNDLE_DIR / "certifications.html", "text/html; charset=utf-8")
+
+
 # Serve bundle root assets
 @app.route("/styles.css", methods=["GET"])
 def styles():

@@ -10,14 +10,6 @@
     />
     <link rel="preconnect" href="https://images.pexels.com" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .cert-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-      .cert-card { padding:24px; border:1px solid var(--line); border-radius:24px; background:rgba(255,255,255,.045); box-shadow: var(--shadow); }
-      .cert-card h3 { margin:0 0 10px; font-size:24px; color: #f7fbff; }
-      body.light .cert-card { background: rgba(255,255,255,.86); }
-      body.light .cert-card h3 { color:#06111d; }
-      .cert-card p { color:var(--muted); line-height:1.6; }
-    </style>
   </head>
   <body>
     <div class="loader" aria-label="Loading Asian Testing and Inspection Services website">
@@ -34,7 +26,6 @@
           <span class="brand-mark"><img src="assets/logo.png" alt="ASIAN logo" /></span>
           <span class="brand-copy">
             <strong>ASIAN TESTING &amp; INSPECTION SERVICE LLP</strong>
-            <small><a href="#certifications" aria-label="View licence and certificates">Testing &bull; Inspection &bull; Certification</a></small>
           </span>
         </a>
 
@@ -75,6 +66,8 @@
         <a class="nav-link magnetic" href="#capabilities" data-cursor="VIEW">Services</a>
         <a class="nav-link magnetic" href="#case-studies" data-cursor="VIEW">Projects</a>
         <a class="nav-link magnetic" href="#about" data-cursor="VIEW">About</a>
+        <a class="nav-link magnetic" href="/certifications" data-cursor="VIEW">Certifications</a>
+        <a class="nav-link magnetic" href="/career" data-cursor="VIEW">Career</a>
         <a class="nav-link magnetic" href="#contact" data-cursor="OPEN">Contact</a>
       </nav>
     </header>
@@ -325,46 +318,18 @@
         </div>
       </section>
 
-      <section class="section certifications" id="certifications">
-        <div class="section-heading reveal">
-          <p class="section-label">Certifications</p>
-          <h2>Licences & certificates, validated for your projects.</h2>
-          <p>Replace the placeholders below with your actual NABL/ISO/NABL accreditation documents when ready.</p>
-        </div>
-
-        <div class="cert-grid">
-          <article class="cert-card reveal">
-            <h3>NABL Accreditation</h3>
-            <p>Placeholder certificate block. Add your PDF/image here.</p>
-            <a class="button primary" href="#contact" aria-label="Request accreditation documents">Request documents</a>
-          </article>
-
-          <article class="cert-card reveal">
-            <h3>Lab Licence</h3>
-            <p>Placeholder licence block. Add your PDF/image here.</p>
-            <a class="button primary" href="#contact" aria-label="Request lab licence">Request licence</a>
-          </article>
-
-          <article class="cert-card reveal">
-            <h3>Calibration & Traceability</h3>
-            <p>Placeholder certificate block. Add your PDFs/images here.</p>
-            <a class="button primary" href="#contact" aria-label="Request calibration certificates">Request certificates</a>
-          </article>
-        </div>
-      </section>
-
       <section class="section contact" id="contact">
         <div class="contact-copy reveal">
           <p class="section-label">Contact</p><h2>Send samples with confidence.</h2>
           <p>Unit No 2 &amp; 3, Nevali Naka, Near Ganesh Temple, Ambernath MIDC Road, Kalyan (East), Maharashtra 421306.</p>
-          <div class="business-hours"><strong>Business hours</strong><span>Mon-Sat / 9:00 AM - 7:00 PM</span></div>
+          <div class="business-hours"><strong>Business hours</strong><span>Mon-Sat / 9:00 AM - 9:00 PM</span></div>
         </div>
         <div class="contact-stack reveal">
           <div class="contact-grid">
             <a href="tel:+918850919087"><strong>Call</strong><span>+91 88509 19087</span></a>
             <a href="tel:+918425916509"><strong>Alternate</strong><span>+91 84259 16509</span></a>
             <a href="https://wa.me/918850919087" target="_blank" rel="noopener noreferrer"><strong>WhatsApp</strong><span>Message on WhatsApp</span></a>
-            <a href="mailto:asian.testinglab@yahoo.com?subject=Quote%20Request&body=Hi%20Asian%20Testing%20%26%20Inspection%20Services%2C%0A%0AI%20would%20like%20to%20request%20a%20quote.%20Details%3A%20%0A%0AThanks%2C" target="_self"><strong>Email</strong><span>asian.testinglab@yahoo.com</span></a>
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=asian.testinglab@yahoo.com&amp;su=Quote%20Request&amp;body=Hi%20Asian%20Testing%20%26%20Inspection%20Services%2C%0A%0AI%20would%20like%20to%20request%20a%20quote.%20Details%3A%20%0A%0AThanks%2C" target="_blank" rel="noopener noreferrer"><strong>Email</strong><span>asian.testinglab@yahoo.com</span></a>
           </div>
           <div class="map-card">
             <iframe title="Asian Testing and Inspection Services location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Unit%20No%202%20%26%203%2C%20Nevali%20Naka%2C%20Near%20Ganesh%20Temple%2C%20Ambernath%20MIDC%20Road%2C%20Kalyan%20East%2C%20Maharashtra%20421306&output=embed"></iframe>
@@ -379,8 +344,8 @@
 
 
       <footer class="site-footer">
-      <div class="footer-brand"><span class="brand-mark"><img src="assets/logo.png" alt="ASIAN logo" /></span><strong>Asian Testing and Inspection Services</strong><p>NABL accredited testing, inspection, analysis and calibration support.</p></div>
-      <div><strong>Quick links</strong><a href="#capabilities">Capabilities</a><a href="#about">About</a><a href="#team">Our Team</a><a href="#contact">Contact</a></div>
+      <div class="footer-brand"><span class="brand-mark"><img src="assets/logo.png" alt="ASIAN logo" /></span><strong>Asian Testing and Inspection Services</strong><p>NABL accredited testing, inspection, analysis and calibration support.</p><div class="social-links" aria-label="Social media links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm5.2-2.7a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8ZM10 15.3V8.7l5.8 3.3L10 15.3Z"/></svg></a><a href="https://wa.me/918850919087" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 2a8 8 0 0 1 6.8 12.2A8 8 0 0 1 8 18.7l-.4-.2-2.6.7.7-2.5-.3-.4A8 8 0 0 1 12 4Zm-3 4.5c-.2 0-.6.1-.9.5-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.3 2.1 3.3 5.2 4.4 2.6.9 3.1.6 3.7.5.6-.1 1.8-.8 2-1.5.2-.7.2-1.3.2-1.5-.1-.1-.2-.2-.5-.4l-1.9-.9c-.3-.1-.5-.2-.7.2l-.8 1c-.1.2-.3.2-.6.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2.1-.4 0-.6l-.9-2c-.2-.4-.4-.4-.7-.5H9Z"/></svg></a></div></div>
+      <div><strong>Quick links</strong><a href="#capabilities">Capabilities</a><a href="#about">About</a><a href="#team">Our Team</a><a href="/certifications">Certifications</a><a href="/career">Career</a><a href="#contact">Contact</a></div>
       <div><strong>Services</strong><a href="#mechanical-testing">Mechanical</a><a href="#chemical-testing">Chemical</a><a href="#metallurgical-testing">Metallurgy</a><a href="#quote">Calibration</a></div>
       <form class="newsletter"><strong>Newsletter</strong><input type="email" placeholder="Work email" /><button type="submit">Subscribe</button></form>
       <p class="copyright">(c) 2026 Asian Testing and Inspection Services. All rights reserved.</p>

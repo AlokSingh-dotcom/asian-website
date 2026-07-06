@@ -96,7 +96,7 @@ function render() {
     sections
       .map(([id, , html], index) => section(id, "", html, index % 2 ? "alt" : ""))
       .join("") +
-<section class="cta-band reveal" id="quote" style="display:none;">` +
+    `<section class="cta-band reveal" id="quote" style="display:none;">` +
     `<div>` +
     `<h2>Ready to plan ${data.title}?</h2>` +
     `<p class="lead">Share your material, standard, acceptance criteria and target date. Asian Testing and Inspection Services will help shape the right testing program.</p>` +
