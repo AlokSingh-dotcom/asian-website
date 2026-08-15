@@ -222,6 +222,7 @@ body.light .badge-row b { background: rgba(6,17,29,.04); color: #1f2b38; }
 .service-card:hover::after,.service-card:focus-visible::after { opacity:1; transform:none; }
 .service-card.hidden { display:none; }
 .service-card img { height:208px; object-fit:cover; transition: transform 720ms cubic-bezier(.16,1,.3,1), filter 520ms ease; }
+.service-card img.metallography-card-image { object-position: center 34%; }
 .service-card:hover img,.service-card:focus-visible img { filter:saturate(1.1) contrast(1.06); transform:translateY(-10px) scale(1.08); }
 .service-body { position:relative; z-index:2; display:flex; flex:1; flex-direction:column; padding:28px 28px 24px; }
 .service-card span { margin-bottom:12px; color:var(--blue); font-size:12px; font-weight:950; letter-spacing:.1em; text-transform:uppercase; }
@@ -282,11 +283,38 @@ body.light .industry-card a, body.light .case-feature a { color:#1f7aff; }
 .team-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
 .team-card { overflow:hidden; border:1px solid var(--line); border-radius:24px; background:rgba(255,255,255,.045); box-shadow:var(--shadow); transition:transform 360ms ease, border-color 360ms ease, box-shadow 360ms ease; }
 .team-card:hover { transform:translateY(-8px); border-color:rgba(74,163,255,.34); box-shadow:0 34px 88px rgba(47,125,244,.14); }
-.team-card img { height:300px; object-fit:cover; filter:saturate(.95); transition:transform 520ms ease; }
+.team-card img { height:300px; object-fit:cover; object-position:center 28%; filter:saturate(.95); transition:transform 520ms ease; }
+.team-card img[src*="STAFF"] { object-position:center 12%; transform-origin:center top; }
 .team-card:hover img { transform:scale(1.06); }
 .team-card div { padding:22px; }
 .team-card strong { display:block; margin-bottom:10px; color:var(--blue); }
 .team-card p { color:var(--muted); line-height:1.6; margin-bottom:0; }
+.company-serve { position:relative; scroll-margin-top:120px; }
+.company-serve::before { content:""; position:absolute; left:50%; top:52%; width:min(980px,90vw); height:58%; border:1px solid rgba(74,163,255,.16); border-radius:8px; background:linear-gradient(135deg,rgba(74,163,255,.1),rgba(255,255,255,.025) 42%,rgba(34,197,94,.08)); transform:translate(-50%,-50%) skewY(-2deg); pointer-events:none; }
+.serve-grid { position:relative; display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:14px; perspective:1100px; }
+.serve-logo { position:relative; isolation:isolate; display:grid; place-items:center; min-height:118px; padding:18px; overflow:hidden; border:1px solid rgba(255,255,255,.14); border-radius:8px; background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(238,244,251,.92)); box-shadow:0 18px 46px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.8); transform:translateY(0) rotateX(0) rotateY(0); animation:serveFloat 6s ease-in-out infinite; transition:transform 360ms cubic-bezier(.16,1,.3,1), border-color 320ms ease, box-shadow 320ms ease, filter 320ms ease; }
+.serve-logo::before { content:""; position:absolute; inset:0; background:linear-gradient(115deg,transparent 18%,rgba(255,255,255,.72) 42%,transparent 62%); transform:translateX(-130%); transition:transform 720ms cubic-bezier(.16,1,.3,1); z-index:-1; }
+.serve-logo::after { content:""; position:absolute; left:14px; right:14px; bottom:10px; height:2px; background:linear-gradient(90deg,transparent,rgba(47,125,244,.6),rgba(34,197,94,.54),transparent); opacity:.5; transform:scaleX(.32); transition:transform 360ms ease, opacity 360ms ease; }
+.serve-grid:hover .serve-logo { filter:saturate(.82) opacity(.72); }
+.serve-grid .serve-logo:hover { z-index:3; filter:saturate(1.06) opacity(1); transform:translateY(-10px) rotateX(7deg) rotateY(-5deg) scale(1.04); border-color:rgba(74,163,255,.52); box-shadow:0 34px 82px rgba(47,125,244,.2), 0 18px 42px rgba(0,0,0,.24); animation-play-state:paused; }
+.serve-grid .serve-logo:hover::before { transform:translateX(130%); }
+.serve-grid .serve-logo:hover::after { opacity:1; transform:scaleX(1); }
+.serve-logo img { width:100%; max-width:140px; max-height:74px; object-fit:contain; filter:saturate(.96) contrast(1.04); transition:transform 360ms ease, filter 360ms ease; }
+.serve-logo:hover img { transform:scale(1.08); filter:saturate(1.08) contrast(1.08); }
+.serve-logo:nth-child(2n) { animation-delay:-1.2s; }
+.serve-logo:nth-child(3n) { animation-delay:-2.4s; }
+.serve-logo:nth-child(4n) { animation-delay:-3.6s; }
+.serve-logo:nth-child(5n) { animation-delay:-4.8s; }
+body.light .company-serve::before { background:linear-gradient(135deg,rgba(47,125,244,.11),rgba(255,255,255,.52) 42%,rgba(34,197,94,.08)); border-color:rgba(6,17,29,.08); }
+body.light .serve-logo { border-color:rgba(6,17,29,.08); box-shadow:0 18px 50px rgba(15,23,42,.1), inset 0 1px 0 rgba(255,255,255,.82); }
+@keyframes serveFloat {
+  0%, 100% { transform:translateY(0) rotateX(0) rotateY(0); }
+  50% { transform:translateY(-7px) rotateX(2deg) rotateY(-1deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .serve-logo { animation:none; }
+  .serve-logo::before { display:none; }
+}
 .gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:210px; gap:14px; }
 .gallery-grid img { height:100%; object-fit:cover; border-radius:22px; transition:transform 360ms ease, filter 360ms ease; }
 .gallery-grid img:hover { transform:scale(1.03); filter:saturate(1.1); }
@@ -358,6 +386,7 @@ body.light .job-card h3, body.light .cert-card h3 { color:#06111d; }
   .nav-dropdown.open .mega-menu { display:grid; }
   .nav-toggle { display:block; position:absolute; top:24px; right:18px; }
   .hero-stats,.service-grid,.industry-grid,.workflow,.stats-band,.contact-grid,.team-grid,.job-grid,.cert-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .serve-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
   .about,.quote-inner,.contact,.case-layout,.intro-panel { grid-template-columns:1fr; }
   .capability-toolbar { flex-direction:column; align-items:stretch; }
 }
@@ -384,6 +413,8 @@ body.light .job-card h3, body.light .cert-card h3 { color:#06111d; }
   .hero-content { padding:22px; }
   .page-hero { min-height:60vh; padding-top:170px; }
   .hero-stats,.service-grid,.industry-grid,.workflow,.stats-band,.contact-grid,.team-grid,.mission-grid,.gallery-grid,.site-footer,.job-grid,.cert-grid { grid-template-columns:1fr; }
+  .serve-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .serve-logo { min-height:104px; padding:14px; }
   .cert-card.featured { grid-column:auto; }
   .service-card,.service-card:hover,.service-card:focus-visible { height:auto; min-height:430px; }
   .service-grid.has-active .service-card.inactive { transform:none; filter:none; opacity:1; }

@@ -140,6 +140,8 @@ h2 { font-size: clamp(28px, 3.4vw, 44px); line-height: 1; letter-spacing: -.03em
 .prose-grid article { padding:0; }
 .prose-grid h2 { margin-bottom:14px; }
 .prose-grid p { margin-bottom:0; }
+.sample-image-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:22px; max-width:520px; }
+.sample-image-grid img { aspect-ratio: 4 / 3; min-height:0; height:auto; object-fit:cover; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.05); }
 .source-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
 .chip-list { display: flex; flex-wrap: wrap; gap: 10px; }
 .chip-list span { display: inline-flex; min-height: 38px; align-items: center; gap:8px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.055); color: var(--soft); font-weight: 850; transition: transform 220ms ease, border-color 220ms ease, background 220ms ease; }
@@ -190,5 +192,6 @@ body.light .related-links a { background: rgba(255,255,255,.74); }
   .plain-steps article { grid-template-columns:1fr; gap:6px; }
   .button, .cta-band .hero-actions { width:100%; }
   .hero-card { display: none; }
+  .sample-image-grid { grid-template-columns:1fr; max-width:360px; }
 }
 

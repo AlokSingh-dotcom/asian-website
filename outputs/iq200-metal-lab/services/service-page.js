@@ -48,6 +48,11 @@ function related(items) {
   }).join("")}</div>`;
 }
 
+function sampleImages() {
+  if (document.body.dataset.service !== "metallography-failure-analysis") return "";
+  return `<div class="sample-image-grid"><img src="../metallography%202.jpeg" alt="Metallography sample inspection" loading="lazy"><img src="../metallography%203.jpeg" alt="Metallography microstructure sample" loading="lazy"></div>`;
+}
+
 function applyImageFallbacks() {
   document.querySelectorAll("img").forEach((image, index) => {
     image.referrerPolicy = "no-referrer";
@@ -88,7 +93,7 @@ function render() {
     ["highlights", "Key Highlights", `${label("Key Highlights")}<div class="prose-grid"><article><h2>Key highlights</h2><p class="lead">This service covers ${sentence(data.highlights).toLowerCase()}. It is structured for practical review by quality, purchase, production and engineering teams.</p></article><article><h2>Applications</h2><p class="lead">Typical use cases include ${sentence(data.applications.slice(0, 4)).toLowerCase()}. The scope can be adjusted based on sample condition, project specification and reporting needs.</p></article></div>`],
     ["standards", "Standards & industries", `${label("Standards & Industries")}<div class="prose-grid"><article><h2>Standards</h2><p class="lead">Testing can be planned around ${sentence(data.standards)} or a customer-specific requirement.</p>${chips(data.standards.slice(0, 6))}</article><article><h2>Industries</h2><p class="lead">The service is commonly used by teams in ${sentence(data.industries).toLowerCase()}.</p></article></div>`],
     ["procedure", "Procedure", `${label("Procedure")}<h2>Testing workflow</h2><p class="lead">The process is kept simple and traceable from sample intake to final reporting.</p>${timeline(data.procedure)}`],
-    ["samples", "Samples & deliverables", `${label("Samples & Deliverables")}<div class="prose-grid"><article><h2>Sample requirements</h2><p class="lead">Please share ${sentence(data.sampleRequirements).toLowerCase()} so the laboratory can confirm the correct scope before testing.</p></article><article><h2>Deliverables</h2><p class="lead">The final output generally includes ${sentence(data.deliverables).toLowerCase()}.</p></article></div>`],
+    ["samples", "Samples & deliverables", `${label("Samples & Deliverables")}<div class="prose-grid"><article><h2>Sample requirements</h2><p class="lead">Please share ${sentence(data.sampleRequirements).toLowerCase()} so the laboratory can confirm the correct scope before testing.</p>${sampleImages()}</article><article><h2>Deliverables</h2><p class="lead">The final output generally includes ${sentence(data.deliverables).toLowerCase()}.</p></article></div>`],
     ["related", "Related", `${label("Related Services")}<h2>Related services</h2>${related(data.related)}`]
   ];
 

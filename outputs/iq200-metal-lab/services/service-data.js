@@ -2,7 +2,7 @@ window.ATIS_SERVICES = {
   "tensile-impact-hardness": {
     title: "Mechanical Testing",
     category: "Testing Services",
-    image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "../MEchanical%20testing.jpeg",
     intro: "Mechanical test programs for ferrous, non-ferrous and alloy materials, covering tensile, impact, hardness, bend and qualification testing.",
     overview: "Asian Testing and Inspection Services delivers comprehensive mechanical testing for reliable performance. The service is designed for material release, product qualification and supplier verification using defined standards, sample condition review and traceable reporting.",
     sourceScope: ["Mechanical testing for metals and alloys", "NABL ISO/IEC 17025:2017 laboratory quality", "Strength, toughness and hardness evaluation", "Reports for compliance and quality teams"],
@@ -22,7 +22,7 @@ window.ATIS_SERVICES = {
   "corrosion-testing": {
     title: "Corrosion Testing",
     category: "Testing Services",
-    image: "https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "../Corrosion%20testing.jpeg",
     intro: "Corrosion testing to evaluate resistance and performance of ferrous and non-ferrous materials in aggressive environments.",
     overview: "Asian Testing and Inspection Services provides corrosion programs for coating performance, service-environment review, material selection and failure investigation. Programs can include IGC, HIC, SCC, chloride stress corrosion and zinc coating measurement with clear technical reporting.",
     sourceScope: ["Corrosion testing for industrial materials", "Performance evaluation under service conditions", "Failure risk reduction support", "Inspection and documentation for asset owners"],
@@ -42,7 +42,7 @@ window.ATIS_SERVICES = {
   "icp-oes-leco-pmi": {
     title: "Chemical Testing",
     category: "Testing Services",
-    image: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "../Chemical%20testing%20.jpeg",
     intro: "Advanced chemical analysis to ensure material composition and quality for ferrous and non-ferrous alloys.",
     overview: "Asian Testing and Inspection Services confirms material grade and alloy chemistry using OES, ICP and PMI analysis. The service supports incoming inspection, vendor verification, batch release and compliance investigation across steel, copper, nickel, aluminum, titanium and other alloy families.",
     sourceScope: ["Chemical analysis for ferrous and non-ferrous alloys", "OES and ICP grade verification", "Material composition and specification support", "Report-ready laboratory output"],
@@ -62,7 +62,7 @@ window.ATIS_SERVICES = {
   "metallography-failure-analysis": {
     title: "Metallurgical Testing",
     category: "Testing Services",
-    image: "https://images.pexels.com/photos/8325958/pexels-photo-8325958.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "../assets/metallography-image-1.jpeg",
     intro: "Microstructure examination for quality control, heat treatment review and failure analysis.",
     overview: "Asian Testing and Inspection Services evaluates microstructure, macrostructure, inclusion content, case depth and weld condition so engineering teams can understand material performance and root cause. Metallography supports production control, inspection, material development and failure investigation.",
     sourceScope: ["Metallography for ferrous and non-ferrous alloys", "Micro and macro image evaluation", "Failure analysis support", "Quality control reporting"],
@@ -82,7 +82,7 @@ window.ATIS_SERVICES = {
   "fatigue-fracture-testing": {
     title: "Calibration Services",
     category: "Calibration",
-    image: "https://images.pexels.com/photos/3912944/pexels-photo-3912944.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1800",
     intro: "Calibration support for measuring instruments used in inspection, testing, production and quality control.",
     overview: "Calibration helps ensure instruments used in testing and production provide dependable readings. Asian Testing and Inspection Services positions calibration alongside testing and inspection services so customers can maintain quality records, audit readiness and measurement confidence.",
     sourceScope: ["Testing, inspection and calibration company positioning", "Quality documentation support", "Useful for production and inspection teams", "Traceability-focused service workflow"],
@@ -102,7 +102,7 @@ window.ATIS_SERVICES = {
   "autoclave-hydrogen-programs": {
     title: "Inspection & NDT Services",
     category: "Inspection Services",
-    image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "../ndt%202.jpeg",
     intro: "Inspection and NDT support for welds, components, structures and engineering assets.",
     overview: "Asian Testing and Inspection Services provides advanced NDT and inspection services to detect defects without damaging materials. On-site and laboratory evaluations include PMI, portable hardness, thickness gauging, surface roughness, ferrite testing and inspection reporting.",
     sourceScope: ["Inspection and NDT support", "Portable and on-site testing", "Component and weld evaluation", "Report-driven quality documentation"],
