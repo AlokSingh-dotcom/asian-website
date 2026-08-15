@@ -72,6 +72,28 @@ def bundle_root_asset(requested_path: str):
     return send_file(target, mimetype=_asset_type(target))
 
 
+@app.route("/industries/<path:requested_path>", methods=["GET"])
+def industries(requested_path: str):
+    requested_path = requested_path.replace("..", "")
+    target = BUNDLE_DIR / "industries" / requested_path
+    if target.suffix == "":
+        target = target.with_suffix(".html")
+
+    suffix = target.suffix.lower()
+    if suffix == ".html":
+        return _read_text(target, "text/html; charset=utf-8")
+    if suffix == ".css":
+        return _read_text(target, "text/css; charset=utf-8")
+    if suffix == ".js":
+        return _read_text(target, "application/javascript; charset=utf-8")
+    if suffix in {".png", ".svg", ".jpg", ".jpeg", ".webp"}:
+        if not target.exists() or not target.is_file():
+            abort(404)
+        return send_file(target, mimetype=_asset_type(target))
+
+    abort(404)
+
+
 @app.route("/assets/<path:requested_path>", methods=["GET"])
 def assets(requested_path: str):
     requested_path = requested_path.replace("..", "")
