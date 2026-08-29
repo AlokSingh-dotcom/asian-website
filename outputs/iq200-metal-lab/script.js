@@ -9,6 +9,7 @@ const siteNav = document.querySelector(".site-nav");
 const navDropdown = document.querySelector(".nav-dropdown");
 const navDropButton = document.querySelector(".nav-drop-button");
 const navItems = siteNav ? siteNav.querySelectorAll(".nav-link") : [];
+const navHomeLogo = document.querySelector(".nav-home-logo");
 const searchButton = document.querySelector(".search-button");
 const themeToggle = document.querySelector(".theme-toggle");
 const serviceSearch = document.querySelector("#service-search");
@@ -96,6 +97,15 @@ searchButton?.addEventListener("click", () => {
   } else {
     window.location.href = "/#capabilities";
   }
+});
+
+navHomeLogo?.addEventListener("click", (event) => {
+  event.preventDefault();
+  siteNav?.classList.remove("open");
+  navDropdown?.classList.remove("open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navDropButton?.setAttribute("aria-expanded", "false");
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
 themeToggle?.addEventListener("click", () => {
