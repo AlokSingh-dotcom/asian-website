@@ -2,26 +2,26 @@ window.ASIAN_INDUSTRIES = {
   automotive: {
     title: "Automotive",
     category: "Industry Support",
-    image: "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1800",
-    intro: "Testing and inspection support for fasteners, forgings, castings, welds and production materials used across automotive supply chains.",
-    stat: "24/7",
-    statLabel: "Support for production-critical material decisions",
-    overview: "Automotive teams need quick, traceable and defensible results for incoming material approval, vendor validation and component performance review. Asian Testing and Inspection Service LLP supports material testing programs that help reduce batch risk and keep production decisions moving.",
-    supports: ["Tensile, impact, bend and hardness testing", "Chemical composition and grade verification", "Metallography, microstructure and failure review"],
-    applications: ["Fasteners, shafts, gears and machined components", "Castings, forgings, billets, rods and wires", "Supplier batch approval and production issue investigation"],
-    deliverables: ["Traceable test reports", "Result tables against required standards", "Technical remarks for quality and engineering teams"]
+    image: "/assets/automotive-assembly.png",
+    intro: "Material testing and inspection support for automotive manufacturers, component suppliers, forging and casting industries, and engineering companies.",
+    stat: "QA",
+    statLabel: "Material quality, dimensional reliability and durability support",
+    overview: "The automobile industry requires consistent material quality, dimensional reliability, mechanical performance and durability across a wide range of components and assemblies. Asian Testing and Inspection Service LLP supports automotive teams with laboratory testing and inspection services that help maintain product quality, improve reliability and meet applicable specifications and industry requirements.",
+    supports: ["Chemical analysis, tensile testing and hardness testing", "Metallographic examination and corrosion testing", "Fatigue-related evaluation and specialized testing services"],
+    applications: ["Shafts, gears, fasteners and suspension components", "Castings, forgings, sheets and tubes", "Welded parts, component assemblies and supplier materials"],
+    deliverables: ["Material quality and mechanical performance reports", "Inspection evidence for dimensional reliability and durability review", "Documentation support for applicable specifications and industry requirements"]
   },
   aerospace: {
     title: "Aerospace",
     category: "Industry Support",
     image: "https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=1800",
-    intro: "Critical alloy testing, fatigue-sensitive material review and failure analysis support for aerospace-grade components and programs.",
-    stat: "ISO",
-    statLabel: "Method-led testing and documentation discipline",
-    overview: "Aerospace-related programs demand careful handling, precise methods and clear documentation. We support teams with material qualification, alloy verification, mechanical testing and failure review for high-consequence components.",
-    supports: ["Mechanical properties and qualification testing", "Alloy chemistry and PMI-style confirmation", "Fracture, metallography and microstructure review"],
-    applications: ["Critical alloys, plates, bars and machined parts", "Supplier qualification and batch verification", "Failure follow-up testing and engineering evidence"],
-    deliverables: ["Method-referenced reports", "Photo and observation records where applicable", "Clear result summaries for technical review"]
+    intro: "Specialized material testing and inspection support for aerospace materials, components, alloys, fasteners, fabricated parts and welded assemblies.",
+    stat: "NDT",
+    statLabel: "Advanced material characterization and inspection support",
+    overview: "The aerospace industry requires exceptional levels of material reliability, performance and quality because aerospace components operate under demanding mechanical, thermal and environmental conditions. Asian Testing and Inspection Service LLP helps aerospace manufacturers, suppliers and engineering organizations evaluate material properties, detect potential defects and support compliance with applicable aerospace standards, specifications and quality requirements.",
+    supports: ["Chemical composition analysis and alloy verification", "Mechanical, hardness and performance-oriented material testing", "Metallography, corrosion evaluation, weld inspection and NDT services"],
+    applications: ["Aerospace materials, alloys and fasteners", "Fabricated parts, machined components and welded assemblies", "Supplier qualification, defect evaluation and engineering review"],
+    deliverables: ["Accurate and reliable material test reports", "Defect detection and inspection observations", "Documentation support for aerospace standards, specifications and quality requirements"]
   },
   construction: {
     title: "Construction",
@@ -47,28 +47,28 @@ window.ASIAN_INDUSTRIES = {
     applications: ["Rails, welds, fasteners and fabricated parts", "Durability review and failure investigation", "Supplier and maintenance documentation"],
     deliverables: ["Inspection and test reports", "Photographic evidence where needed", "Engineering-friendly summary observations"]
   },
-  energy: {
-    title: "Energy",
+  petroleumGas: {
+    title: "Petroleum & Gas",
     category: "Industry Support",
     image: "https://images.pexels.com/photos/257700/pexels-photo-257700.jpeg?auto=compress&cs=tinysrgb&w=1800",
-    intro: "Testing and inspection for pressure equipment, pipelines, corrosion programs and materials used in demanding energy environments.",
-    stat: "NACE",
-    statLabel: "Corrosion and material performance support",
-    overview: "Energy sector materials face pressure, temperature and corrosion exposure. We help teams qualify materials, evaluate corrosion risk and document test evidence for pipelines, pressure equipment and fabrication programs.",
-    supports: ["Corrosion testing and coating performance review", "Mechanical and chemical material qualification", "Metallography, failure review and weld evaluation"],
-    applications: ["Pipelines, pressure parts and fabricated equipment", "Material selection and qualification programs", "Corrosion-related issue investigation"],
-    deliverables: ["Corrosion and material test reports", "Method and duration references", "Clear observations for project decisions"]
+    intro: "Reliable testing and inspection solutions for pipelines, pressure vessels, valves, flanges, fittings, welding consumables and other critical oil and gas components.",
+    stat: "NDT",
+    statLabel: "Material integrity and failure-prevention support",
+    overview: "The Petroleum & Gas industry demands materials and components that can perform reliably under high pressure, temperature variations, corrosive environments and continuous service conditions. Asian Testing and Inspection Service LLP supports oil and gas manufacturers, fabricators, contractors and service providers with testing and inspection services that help assess material integrity, identify potential failures and ensure components meet relevant technical standards and project requirements.",
+    supports: ["Chemical analysis, mechanical testing and hardness testing", "Metallography, corrosion testing and weld evaluation", "Non-Destructive Testing (NDT) for critical components"],
+    applications: ["Pipelines, pressure vessels, valves and flanges", "Fittings, welding consumables and fabricated assemblies", "Oil and gas components exposed to pressure, temperature and corrosive service"],
+    deliverables: ["Material integrity and inspection reports", "Failure-risk observations and component evaluation records", "Documentation support for technical standards and project requirements"]
   },
-  manufacturing: {
-    title: "Manufacturing",
+  chemicalProcessingEquipment: {
+    title: "Chemical Processing Equipment",
     category: "Industry Support",
     image: "https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=1800",
-    intro: "Incoming material testing, vendor validation and R&D support for manufacturers working with metals and engineering components.",
-    stat: "QA",
-    statLabel: "Reliable test intelligence for repeat production",
-    overview: "Manufacturing teams need repeatable testing, quick reporting and dependable technical communication. Asian Testing and Inspection Service LLP supports material approval, process control and product development workflows.",
-    supports: ["Incoming material and vendor batch verification", "Mechanical, chemical and metallurgical testing", "Calibration, inspection and documentation support"],
-    applications: ["Raw material, machined parts and production samples", "Vendor development and supplier comparison", "R&D trials and production issue analysis"],
-    deliverables: ["Traceable lab reports", "Comparison-ready result tables", "Documentation support for customer and audit needs"]
+    intro: "Comprehensive material testing and inspection services for chemical processing equipment, critical components and welded assemblies.",
+    stat: "NDT",
+    statLabel: "Structural integrity support for aggressive service environments",
+    overview: "The chemical processing equipment industry relies heavily on high-performance materials capable of withstanding aggressive chemicals, elevated temperatures, pressure and demanding operating environments. Asian Testing and Inspection Service LLP helps manufacturers and end users verify material quality, structural integrity and compliance with applicable industry standards and specifications.",
+    supports: ["Chemical composition analysis, mechanical testing and hardness testing", "Metallography, corrosion evaluation and weld inspection", "Non-Destructive Testing (NDT) for equipment and critical components"],
+    applications: ["Pressure vessels, process piping, valves and tanks", "Fittings, heat exchangers and welded assemblies", "Materials exposed to aggressive chemicals, pressure and elevated temperatures"],
+    deliverables: ["Material quality and structural integrity reports", "Inspection observations for equipment and welded assemblies", "Documentation support for applicable industry standards and specifications"]
   }
 };

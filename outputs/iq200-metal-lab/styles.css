@@ -89,6 +89,9 @@ body.light .header-top { border-bottom-color: rgba(6,17,29,.1); }
 body.light .site-nav { border-color: rgba(255,255,255,.38); background: rgba(255,255,255,.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.5); }
 .nav-pill { position: absolute; z-index: 0; left: var(--pill-left,4px); top: var(--pill-top,4px); width: var(--pill-width,80px); height: var(--pill-height,40px); border-radius: 14px; background: rgba(255,255,255,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.16); opacity: var(--pill-opacity,0); transition: all 520ms cubic-bezier(.16,1,.3,1); }
 body.light .nav-pill { background: rgba(47,125,244,.12); box-shadow: inset 0 1px 0 rgba(255,255,255,.82); }
+.nav-home-logo { position:absolute; z-index:3; left:22px; top:50%; display:grid; place-items:center; width:58px; height:40px; overflow:hidden; opacity:0; pointer-events:none; transform:translateY(-50%); transition:opacity 220ms ease; }
+.nav-home-logo img { width:48px; height:34px; object-fit:contain; }
+.site-header.scrolled .nav-home-logo { width:58px; opacity:1; pointer-events:auto; }
 .nav-link, .nav-drop-button, .search-button, .theme-toggle, .nav-cta { position: relative; z-index: 1; display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 14px; border: 0; border-radius: 14px; background: transparent; color: var(--soft); font-size: 15px; font-weight: 800; line-height: 1; white-space: nowrap; cursor: pointer; }
 .nav-link:hover, .nav-drop-button:hover { color: white; }
 body.light .nav-link:hover, body.light .nav-drop-button:hover { color: #0b62d6; }
@@ -411,6 +414,13 @@ body.light .quality-policy-mark strong { color:#06111d; }
 .team-card div { padding:22px; }
 .team-card strong { display:block; margin-bottom:10px; color:var(--blue); }
 .team-card p { color:var(--muted); line-height:1.6; margin-bottom:0; }
+.tpi-section .section-heading { max-width:980px; }
+.tpi-logo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:center; }
+.tpi-logo-card { display:grid; place-items:center; min-height:300px; padding:clamp(26px,5vw,46px); border:1px solid var(--line); border-radius:8px; background:rgba(255,255,255,.045); box-shadow:var(--shadow); transition:transform 360ms ease, border-color 360ms ease, box-shadow 360ms ease; }
+.tpi-logo-card:hover { transform:translateY(-8px); border-color:rgba(74,163,255,.34); box-shadow:0 34px 88px rgba(47,125,244,.14); }
+.tpi-logo-card img { width:auto; height:auto; max-width:100%; max-height:210px; object-fit:contain; filter:saturate(1.02) contrast(1.04); transition:transform 420ms cubic-bezier(.16,1,.3,1); }
+.tpi-logo-card:hover img { transform:scale(1.04); }
+body.light .tpi-logo-card { background:rgba(255,255,255,.86); box-shadow:0 18px 50px rgba(15,23,42,.1); }
 .company-serve { position:relative; isolation:isolate; width:min(1380px, calc(100% - 36px)); scroll-margin-top:120px; padding-inline:clamp(18px,4vw,56px); border-radius:0; overflow:hidden; }
 .company-serve::before { content:""; position:absolute; inset:0; z-index:-2; background:radial-gradient(circle at 82% 10%,rgba(31,122,255,.38),transparent 36%), radial-gradient(circle at 8% 18%,rgba(74,163,255,.14),transparent 34%), linear-gradient(180deg,#05080d,#07121e 54%,#05080d); }
 .company-serve::after { content:""; position:absolute; inset:0; z-index:-1; background:repeating-radial-gradient(circle at -4% 4%, rgba(74,163,255,.16) 0 1px, transparent 1px 34px); opacity:.42; mask-image:linear-gradient(90deg,#000,transparent 38%); pointer-events:none; }
@@ -432,6 +442,7 @@ body.light .quality-policy-mark strong { color:#06111d; }
 .serve-logo img[src*="serve3"], .serve-logo img[src*="serve9"], .serve-logo img[src*="serve11"], .serve-logo img[src*="serve14"] { max-width:78%; max-height:78%; }
 .serve-logo img[src*="serve3"] { max-height:74%; }
 .serve-logo img[src*="serve14"] { max-width:72%; max-height:72%; }
+.serve-logo img[src*="Reliance"], .serve-logo img[src*="RELIANCE"] { max-width:88%; max-height:70%; }
 .serve-logo strong { display:block; max-width:100%; min-height:48px; color:#f7fbff; font-size:19px; line-height:1.2; font-weight:850; text-align:center; text-wrap:balance; }
 .serve-grid:hover .serve-logo.visible:not(:hover) { opacity:.72; transform:translateY(2px) scale(.985); }
 .serve-grid .serve-logo:hover { z-index:3; opacity:1; transform:translateY(-10px) scale(1.025); border-color:rgba(74,163,255,.62); box-shadow:0 36px 84px rgba(31,122,255,.2), 0 20px 48px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.14); }
@@ -521,6 +532,9 @@ body.light .job-card h3, body.light .cert-card h3 { color:#06111d; }
   .site-nav { position:fixed; top:148px; left:18px; right:18px; display:none; flex-direction:column; align-items:stretch; gap:8px; padding:14px; border-radius:24px; background:rgba(8,12,18,.92); box-shadow:var(--shadow); transform:translateY(-12px) scale(.98); opacity:0; }
   .site-nav.open { display:flex; transform:none; opacity:1; }
   .nav-pill { display:none; }
+  .nav-home-logo { left:18px; width:54px; height:38px; }
+  .site-header.scrolled .nav-home-logo { width:54px; }
+  .nav-home-logo img { width:54px; height:38px; }
   .nav-link,.nav-drop-button,.nav-cta,.search-button,.theme-toggle { width:100%; justify-content:space-between; min-height:48px; }
   .mega-menu { position:static; display:none; width:100%; grid-template-columns:1fr; box-shadow:none; opacity:1; pointer-events:auto; transform:none; }
   .nav-dropdown.open .mega-menu { display:grid; }
@@ -558,6 +572,9 @@ body.light .job-card h3, body.light .cert-card h3 { color:#06111d; }
   .company-serve .section-heading { margin-bottom:30px; }
   .company-serve h2 { font-size:42px; }
   .company-serve .section-heading p:not(.section-label) { font-size:17px; }
+  .tpi-logo-grid { grid-template-columns:1fr; gap:14px; }
+  .tpi-logo-card { min-height:220px; }
+  .tpi-logo-card img { max-height:160px; }
   .page-hero { min-height:60vh; padding-top:170px; }
   .hero-stats,.service-grid,.industry-grid,.workflow,.stats-band,.contact-grid,.team-grid,.gallery-grid,.site-footer,.job-grid,.cert-grid { grid-template-columns:1fr; }
   .serve-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
