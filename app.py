@@ -38,11 +38,6 @@ def index():
     return _read_text(BUNDLE_DIR / "index.html", "text/html; charset=utf-8")
 
 
-@app.route("/career", methods=["GET"])
-@app.route("/career.html", methods=["GET"])
-def career():
-    return _read_text(BUNDLE_DIR / "career.html", "text/html; charset=utf-8")
-
 
 @app.route("/certifications", methods=["GET"])
 @app.route("/certifications.html", methods=["GET"])
@@ -132,7 +127,6 @@ def _send_email(subject: str, body: str, recipient: str | None = None) -> None:
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ctx) as server:
         server.login(GMAIL_USER, GMAIL_APP_PASSWORD)
         server.sendmail(GMAIL_USER, recipient, msg.as_string())
-
 
 @app.route("/api/quote", methods=["POST"])
 def quote_request():
