@@ -412,8 +412,9 @@ body.light .quality-policy-mark strong { color:#06111d; }
 .team-card img[src*="STAFF"] { object-position:center 12%; transform-origin:center top; }
 .team-card:hover img { transform:scale(1.06); }
 .team-card div { padding:22px; }
+.team-card h3 { line-height:1.25; margin-bottom:10px; }
 .team-card strong { display:block; margin-bottom:10px; color:var(--blue); }
-.team-card p { color:var(--muted); line-height:1.6; margin-bottom:0; }
+.team-card p { color:var(--muted); line-height:1.65; margin-bottom:0; font-size:15px; }
 .tpi-section .section-heading { max-width:980px; }
 .tpi-logo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:center; }
 .tpi-logo-card { display:grid; place-items:center; min-height:300px; padding:clamp(26px,5vw,46px); border:1px solid var(--line); border-radius:8px; background:rgba(255,255,255,.045); box-shadow:var(--shadow); transition:transform 360ms ease, border-color 360ms ease, box-shadow 360ms ease; }
