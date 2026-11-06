@@ -209,6 +209,21 @@ def nabl_certificate():
     )
 
 
+@app.route("/scope-certificate", methods=["GET"])
+def scope_certificate():
+    scope_path = BUNDLE_DIR / "New Scope 2025.pdf"
+    if not scope_path.exists():
+        abort(404)
+    response = send_file(
+        scope_path,
+        mimetype="application/pdf",
+        as_attachment=False,
+        download_name="New Scope 2025.pdf",
+    )
+    response.headers["Content-Disposition"] = 'inline; filename="New Scope 2025.pdf"'
+    return response
+
+
 # Serve service pages and their assets (HTML/CSS/JS)
 @app.route("/services/<path:requested_path>", methods=["GET"])
 def services(requested_path: str):
