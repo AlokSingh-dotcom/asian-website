@@ -22,7 +22,7 @@ window.ATIS_SERVICES = {
   "corrosion-testing": {
     title: "Corrosion Testing",
     category: "Testing Services",
-    image: "../Corrosion%20testing.jpeg",
+    image: "../corrosion-testing.jpeg",
     intro: "Corrosion testing to evaluate resistance and performance of ferrous and non-ferrous materials in aggressive environments.",
     overview: "Asian Testing and Inspection Services provides corrosion programs for coating performance, service-environment review, material selection and failure investigation. Programs can include IGC, HIC, SCC, chloride stress corrosion and zinc coating measurement with clear technical reporting.",
     sourceScope: ["Corrosion testing for industrial materials", "Performance evaluation under service conditions", "Failure risk reduction support", "Inspection and documentation for asset owners"],
