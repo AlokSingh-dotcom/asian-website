@@ -2,7 +2,7 @@ window.ATIS_SERVICES = {
   "tensile-impact-hardness": {
     title: "Mechanical Testing",
     category: "Testing Services",
-    image: "../MEchanical%20testing.jpeg",
+    image: "../mechanical-testing.jpeg",
     intro: "Mechanical test programs for ferrous, non-ferrous and alloy materials, covering tensile, impact, hardness, bend and qualification testing.",
     overview: "Asian Testing and Inspection Services delivers comprehensive mechanical testing for reliable performance. The service is designed for material release, product qualification and supplier verification using defined standards, sample condition review and traceable reporting.",
     sourceScope: ["Mechanical testing for metals and alloys", "NABL ISO/IEC 17025:2017 laboratory quality", "Strength, toughness and hardness evaluation", "Reports for compliance and quality teams"],

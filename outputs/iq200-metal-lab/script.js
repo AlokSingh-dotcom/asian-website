@@ -22,13 +22,6 @@ const testimonials = document.querySelectorAll(".testimonial");
 const galleryButtons = document.querySelectorAll("[data-gallery]");
 const galleryItems = document.querySelectorAll("[data-gallery-item]");
 const savedTheme = localStorage.getItem("atis-theme");
-const imageFallbacks = [
-  "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1200"
-];
-
 let activeFilter = "all";
 let testimonialIndex = 0;
 
@@ -39,14 +32,7 @@ if (savedTheme === "light") {
 document.querySelectorAll("img").forEach((image, index) => {
   image.referrerPolicy = "no-referrer";
   image.addEventListener("error", () => {
-    if (image.dataset.fallbackApplied === "true") {
-      const label = encodeURIComponent(image.alt || "Testing Laboratory");
-      image.src = `https://placehold.co/900x600/101722/4aa3ff?text=${label}`;
-      return;
-    }
-
-    image.dataset.fallbackApplied = "true";
-    image.src = imageFallbacks[index % imageFallbacks.length];
+    image.dataset.loadError = "true";
   });
 });
 
